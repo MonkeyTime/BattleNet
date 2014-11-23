@@ -13,8 +13,8 @@ Datas are in the public to promote (if you need) exchanges some datas with a fri
 
 ## World of Warcraft
 
--All languages are supported
--All regions are supported
+> Normally all languages are supported (not tested yet)
+> Normally all regions are supported (not tested yet)
 
 
 ## Changelog

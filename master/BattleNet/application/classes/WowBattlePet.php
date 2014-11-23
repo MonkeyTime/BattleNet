@@ -124,7 +124,7 @@ class WowBattlePet implements IWowBattlePet {
 	}
 
 	/**
-	 * getJson
+	 * json
 	 *
 	 * @return Object
 	 */
@@ -134,7 +134,7 @@ class WowBattlePet implements IWowBattlePet {
 	}
 
 	/**
-	 * getJsonP
+	 * jsonp
 	 *
 	 * @return Object
 	 */

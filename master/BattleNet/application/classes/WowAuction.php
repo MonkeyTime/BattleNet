@@ -54,7 +54,7 @@ class WowAuction implements IWowAuction {
 	}
 	
 	/**
-	 * getJson
+	 * json
 	 * 
 	 * @return Object
 	 */
@@ -64,7 +64,7 @@ class WowAuction implements IWowAuction {
 	}
 	
 	/**
-	 * getJsonP
+	 * jsonp
 	 * 
 	 * @return Object
 	 */

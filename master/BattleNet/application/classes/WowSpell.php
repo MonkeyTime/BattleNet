@@ -53,7 +53,7 @@ class WowSpell implements IWowSpell {
 	}
 	
 	/**
-	 * getJson
+	 * json
 	 *
 	 * @return Object
 	 */
@@ -63,7 +63,7 @@ class WowSpell implements IWowSpell {
 	}
 	
 	/**
-	 * getJsonP
+	 * jsonp
 	 *
 	 * @return Object
 	 */

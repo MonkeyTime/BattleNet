@@ -53,7 +53,7 @@ class WowQuest implements IWowQuest {
 	}
 	
 	/**
-	 * getJson
+	 * json
 	 * 
 	 * @return Object
 	 */
@@ -63,7 +63,7 @@ class WowQuest implements IWowQuest {
 	}
 	
 	/**
-	 * getJsonP
+	 * jsonp
 	 * 
 	 * @return Object
 	 */

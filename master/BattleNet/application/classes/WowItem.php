@@ -55,7 +55,7 @@ class WowItem implements IWowItem {
 	 *
 	 * @param integer $id
 	 *
-	 * @return WowBattlePet
+	 * @return WowItem
 	 */
 	public function item($id) {
 	
@@ -71,7 +71,7 @@ class WowItem implements IWowItem {
 	 *
 	 * @param integer $id
 	 *
-	 * @return WowBattlePet
+	 * @return WowItem
 	 */
 	public function set($id) {
 	
@@ -83,7 +83,7 @@ class WowItem implements IWowItem {
 	}
 	
 	/**
-	 * getJson
+	 * json
 	 *
 	 * @return Object
 	 */
@@ -93,7 +93,7 @@ class WowItem implements IWowItem {
 	}
 	
 	/**
-	 * getJsonP
+	 * jsonp
 	 *
 	 * @return Object
 	 */

@@ -54,7 +54,7 @@ class WowRecipe implements IWowRecipe {
 	}
 	
 	/**
-	 * getJson
+	 * json
 	 *
 	 * @return Object
 	 */
@@ -64,7 +64,7 @@ class WowRecipe implements IWowRecipe {
 	}
 	
 	/**
-	 * getJsonP
+	 * jsonp
 	 *
 	 * @return Object
 	 */

@@ -141,10 +141,7 @@ class WowChallengeMode implements IWowChallengeMode {
 		elseif(strpos('kr.api.battle.net', $host) !== false) {
 			$region = 'kr';
 		}
-		elseif(strpos('sea.api.battle.net', $host) !== false) {
-			$region = 'sea';
-		}
-		elseif(strpos('cn.api.battle.net', $host) !== false) {
+		elseif(strpos('www.battlenet.com.cn', $host) !== false) {
 			$region = 'cn';
 		}
 		else {
@@ -247,10 +244,7 @@ class WowChallengeMode implements IWowChallengeMode {
 		elseif(strpos('kr.api.battle.net', $host) !== false) {
 			$region = 'kr';
 		}
-		elseif(strpos('sea.api.battle.net', $host) !== false) {
-			$region = 'sea';
-		}
-		elseif(strpos('cn.api.battle.net', $host) !== false) {
+		elseif(strpos('www.battlenet.com.cn', $host) !== false) {
 			$region = 'cn';
 		}
 		else {

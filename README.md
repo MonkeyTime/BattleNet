@@ -22,8 +22,8 @@ Show the Blizzard rules on API usage @ https://dev.battle.net/policy
 
 ## World of Warcraft
 
-* normally all languages are supported (not tested yet)
-* normally all regions are supported (not tested yet)
+* normally all languages are supported (not all tested yet)
+* normally all regions are supported (not all tested yet)
 
 
 ## Changelog

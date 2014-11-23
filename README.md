@@ -11,9 +11,17 @@ You must use your personal API key. To have a API key subscribe on https://dev.b
 
 @ https://github.com/MonkeyTime/BattleNet/tree/master/master/BattleNet/public
 
-## License 
+## License
+
+General Public License
+
+Battle.net, Warcraft, World of Warcraft, StarCraft and Diablo are copyrighted by Blizzard Entertainment, Inc.
+
+This library is neither endorsed by nor associated with Blizzard Entertainment, Inc.
 
 Show the Blizzard rules on API usage @ https://dev.battle.net/policy
+
+This CODE was released in the public domain WITHOUT ANY GARANTY OF ANY KIND.
 
 ## Extra
 

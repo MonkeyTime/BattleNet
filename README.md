@@ -11,9 +11,9 @@ If you need, classes was build to work independently (TRequest and its interface
 
 Datas are in the public to promote (if you need) exchanges some datas with a friendship guild and create a in common community app. If you don't need you can protect the folder with a .htaccess file. 
 
-* World of Warcraft
-> normally all languages are supported (not tested yet)
-> normally all regions are supported (not tested yet)
+## World of Warcraft
+* normally all languages are supported (not tested yet)
+* normally all regions are supported (not tested yet)
 
 
 ## Changelog

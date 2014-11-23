@@ -1,7 +1,7 @@
 BattleNet
 =========
 
-**A BattleNet PHP API for an access to original BattleNet json and jsonp datas**
+**A BattleNet PHP library to gain access to the original BattleNet json and jsonp WoW / SC2 / D3 datas**
 
 ## Personal API key
 

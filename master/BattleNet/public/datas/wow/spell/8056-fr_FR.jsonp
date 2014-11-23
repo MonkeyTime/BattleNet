@@ -1,0 +1,1 @@
+callback({"id":8056,"name":"Horion de givre","icon":"spell_frost_frostshock","description":"La cible est frappée instantanément par le givre. Elle subit 2 659 points de dégâts de Givre et sa vitesse de déplacement est réduite de 50%. Dure 8 s.","range":"25 m. de portée","powerCost":"1,25% du mana de base","castTime":"Incantation instantanée","cooldown":"6 s. de recharge"});

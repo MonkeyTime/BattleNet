@@ -9,6 +9,8 @@ How to use @ https://github.com/MonkeyTime/BattleNet/tree/master/master/BattleNe
 
 If you need, classes was build to work independently (TRequest and its interface necessary)
 
+Datas are in the public to promote (if you need) exchanges some datas with a friendship guild and create a in common community app. If you don't need you can protect the folder with a .htaccess file.
+
 ## Changelog
 
 * 0.1

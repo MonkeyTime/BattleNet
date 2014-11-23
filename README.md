@@ -9,9 +9,9 @@ You must use your personal API key. To have a API key subscribe on https://dev.b
 
 ## How to use 
 
-Show index.php and cron.php files @ https://github.com/MonkeyTime/BattleNet/tree/master/master/BattleNet/public
+@ https://github.com/MonkeyTime/BattleNet/tree/master/master/BattleNet/public
 
-## Lisence 
+## License 
 
 Show the Blizzard rules on API usage @ https://dev.battle.net/policy
 

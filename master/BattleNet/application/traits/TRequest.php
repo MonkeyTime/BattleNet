@@ -167,55 +167,30 @@ trait TRequest {
 	
 	/**
 	 * toLink
-	 * 
-	 * @param string $url
+	 *
 	 * @param string $str
 	 * 
 	 * @return string
 	 */
-	private function toLink($url, $str) {
+	private function toLink($str) {
+		
+		//fake url for php test with filter_var
+		$url = 'https://dev.battle.net/';
+		
 		//Suffisent in some case (utf-8)
+		#to lower case + white space and simple quote replaced
+		$str = strtolower(str_replace(' ', '-', str_replace('\'', '', $str)));
 	
-		#to lower case + point and white space and simple quote replaced by hyphens
-		$str = strtolower(str_replace('.', '', str_replace(' ', '-', str_replace('\'', '', $str))));
-	
-		#replace all hyphen followed by other(s) by only one
-		$str = preg_replace('#-+#', '-', $str);
-	
-		#if first chars is hyphen, remove it
-		if($str[0] == '-') {
-			$str = substr($str, 1);
-		}
-	
-		# if last chars is hyphen, remove it
-		if(substr($str, -1) == '-') {
-			$str = substr($str, 0, -1);
-		}
-	
-		//Sometimes we need more dealing (utf-8 US with special chars) @usage filter_var >= PHP 5.2.0
+		//Sometimes we need more dealing (utf-8 Europe) @usage filter_var >= PHP 5.2.0
 		if(!filter_var($url . $str, FILTER_VALIDATE_URL)) {
 	
-		#all special chars and eventually typing errors on the keyboard are removed
-			$str = strtr($str, array('[' => '-', ']' => '-', '{' => '-', '}' => '-', '(' => '-', ')' => '-', '?' => '-', '!' => '-', '/' => '-', '~' => '-', ',' => '-', ':' => '-', ';' => '-', '+' => '-', '@' => '-', '|' => '-', '&' => '-', '#' => '-', '§' => '-', '^' => '-', '´' => '-', '`' => '-', '*' => '-', '°' => '-', '¨' => '-', '£' => '-', 'µ' => '-', '%' => '-', '<' => '-', '>' => '-', '\\' => '-'));
-	
-			#replace all hyphens followed by other(s) by only one
-			$str = preg_replace('#-+#', '-', $str);
-	
-			#if first chars is hyphen, remove it
-			if($str[0] == '-') {
-				$str = substr($str, 1);
-			}
-	
-			# if last chars is hyphen, remove it
-			if(substr($str, -1) == '-') {
-				$str = substr($str, 0, -1);
-			}
-	
-			//Sometimes we need more dealing (utf-8 Europe)
+			#all accented char replaced by its couterpart without
+			$str = strtr($str, array('à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'ç' => 'c', 'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o', 'ö' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ü' => 'u', 'ý' => 'y', 'ÿ' => 'y'));
+			
+			//Sometimes we need even more dealing (Russian chars, Chinese chars,...)
 			if(!filter_var($url . $str, FILTER_VALIDATE_URL)) {
-	
-				#all accented char replaced by its couterpart without
-				$str = strtr($str, array('à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'ç' => 'c', 'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i', 'î' => 'i', 'ï' => 'i', 'ñ' => 'n', 'ò' => 'o', 'ó' => 'o', 'ô' => 'o', 'õ' => 'o', 'ö' => 'o', 'ù' => 'u', 'ú' => 'u', 'û' => 'u', 'ü' => 'u', 'ý' => 'y', 'ÿ' => 'y'));
+					
+				$str = urlencode($str);
 			}
 		}
 	
@@ -231,10 +206,10 @@ trait TRequest {
 	 */
 	private function setRoute($route) {
 	
-		/*if(!filter_var($route, FILTER_VALIDATE_URL)) {
+		if(!filter_var($route, FILTER_VALIDATE_URL)) {
 				
-			throw new InvalidArgumentException('route must be a valid wow api url');
-		}*/
+			throw new InvalidArgumentException('route must be a valid url format.');
+		}
 	
 		return $route;
 	}

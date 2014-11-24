@@ -34,7 +34,7 @@ class WowCharacterProfile implements IWowCharacterProfile {
 
 		if(is_string($realm)) {
 				
-			$this->realm = $this->toLink(unserialize(API_LINKS)[$this->locale] . IWowCharacterProfile::ROUTE, $realm);
+			$this->realm = $this->toLink($realm);
 				
 			return;
 		}

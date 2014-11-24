@@ -34,7 +34,7 @@ class WowGuildProfile implements IWowGuildProfile {
 
 		if(is_string($realm)) {
 				
-			$this->realm = $this->toLink(unserialize(API_LINKS)[$this->locale] . IWowGuildProfile::ROUTE, $realm);
+			$this->realm = $this->toLink($realm);
 				
 			return;
 		}

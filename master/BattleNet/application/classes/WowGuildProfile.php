@@ -21,7 +21,6 @@ class WowGuildProfile implements IWowGuildProfile {
 		$this->setGuild($guild);
 		$this->setFields($this->fields);
 		$this->route = $this->setRoute(unserialize(API_LINKS)[$this->locale] . IWowGuildProfile::ROUTE . $this->realm . '/' . $this->guild . '?locale=' . $this->locale . '&fields=' . $this->fields . '&apikey=' . API_KEY);
-		//exit(print_r($this->route));
 	}
 
 	/**

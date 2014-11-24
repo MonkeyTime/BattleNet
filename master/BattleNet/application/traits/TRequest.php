@@ -177,7 +177,7 @@ trait TRequest {
 		//Suffisent in some case (utf-8)
 	
 		#to lower case + point and white space and simple quote replaced by hyphens
-		$str = strtolower(str_replace('.', '', str_replace(' ', '-', str_replace('\'', '-', $str))));
+		$str = strtolower(str_replace('.', '', str_replace(' ', '-', str_replace('\'', '', $str))));
 	
 		#replace all hyphen followed by other(s) by only one
 		$str = preg_replace('#-+#', '-', $str);
@@ -231,10 +231,10 @@ trait TRequest {
 	 */
 	private function setRoute($route) {
 	
-		if(!filter_var($route, FILTER_VALIDATE_URL)) {
+		/*if(!filter_var($route, FILTER_VALIDATE_URL)) {
 				
 			throw new InvalidArgumentException('route must be a valid wow api url');
-		}
+		}*/
 	
 		return $route;
 	}

@@ -477,7 +477,8 @@ class WowCharacterProfile implements IWowCharacterProfile {
 	
 			} else {
 	
-				$response = 'callback({"message": "HTTP/1.1 404 Not Found"});';
+				//Api on maintenance and local file exist
+				$response = file_get_contents($file);
 			}
 	
 		} else {
@@ -565,12 +566,13 @@ class WowCharacterProfile implements IWowCharacterProfile {
 	
 			} else {
 	
-				$response = 'callback({"message": "HTTP/1.1 404 Not Found"});';
+				//Api on maintenance and local file exist
+				$response = readfile($file);
 			}
 				
 		} else {
 	
-			$response = file_get_contents($file);
+			$response = readfile($file);
 		}
 	
 		return $response;

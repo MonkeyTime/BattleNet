@@ -36,5 +36,8 @@ This CODE was released in the public domain WITHOUT ANY GARANTY OF ANY KIND.
 
 ## Changelog
 
+* 0.2
+> some codes enhancement + added response when local file exist and Api is on maintenance
+
 * 0.1
-> initial commit (only World of Warcraft currently supported)
+> initial release (only World of Warcraft currently supported)

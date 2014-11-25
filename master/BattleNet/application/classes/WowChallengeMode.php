@@ -206,7 +206,8 @@ class WowChallengeMode implements IWowChallengeMode {
 				
 			} else {
 				
-				$response = '{"message": "HTTP/1.1 404 Not Found"}';
+				//Api on maintenance and local file exist
+				$response = file_get_contents($file);
 			}
 	
 		} else {
@@ -309,12 +310,13 @@ class WowChallengeMode implements IWowChallengeMode {
 				
 			} else {
 				
-				$response = 'callback({"message": "HTTP/1.1 404 Not Found"});';
+				//Api on maintenance and local file exist
+				$response = readfile($file);
 			}
 			
 		} else {
 	
-			$response = file_get_contents($file);
+			$response = readfile($file);
 		}
 	
 		return $response;

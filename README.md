@@ -21,7 +21,7 @@ This library is neither endorsed by nor associated with Blizzard Entertainment, 
 
 Show the Blizzard rules on API usage @ https://dev.battle.net/policy
 
-This CODE was released in the public domain WITHOUT ANY GARANTY OF ANY KIND.
+This CODE was released in the public domain WITHOUT ANY WARRANTY OF ANY KIND.
 
 ## Extra
 

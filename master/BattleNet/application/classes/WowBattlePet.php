@@ -316,12 +316,12 @@ class WowBattlePet implements IWowBattlePet {
 			} else {
 				
 				//Api on maintenance and local file exist
-				$response = readfile($file);
+				$response = file_get_contents($file);
 			}
 			
 		} else {
 	
-			$response = readfile($file);
+			$response = file_get_contents($file);
 		}
 	
 		return $response;

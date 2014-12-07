@@ -152,7 +152,7 @@ class WowGuildProfile implements IWowGuildProfile {
 			case('full'):
 			default:
 				
-				return self::getDecodedP($this->route, IWowGuildProfile::TIMER);
+				return 'callback(' . self::getDecodedP($this->route, IWowGuildProfile::TIMER) . ');';
 					
 			break;
 			

@@ -81,7 +81,7 @@ class WowPvp implements IWowPvp {
 	
 		$this->route .= '&jsonp=callback';
 		
-		return $this->getDecodedP($this->route, IWowPvp::TIMER);
+		return 'callback(' . $this->getDecodedP($this->route, IWowPvp::TIMER) . ');';
 	}
 	
 	/**

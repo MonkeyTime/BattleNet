@@ -208,9 +208,9 @@ trait TRequest {
 	 */
 	private function setRoute($route) {
 	
-		if(!filter_var($route, FILTER_VALIDATE_URL)) {
+		if(!is_string($route)) {
 				
-			throw new InvalidArgumentException('route must be a valid url format.');
+			throw new InvalidArgumentException('route parameter must be a string.');
 		}
 	
 		return $route;

@@ -1,7 +1,7 @@
 BattleNet
 =========
 
-**A BattleNet PHP library to gain access to the original BattleNet json and jsonp WoW / SC2 / D3 datas**
+**A BattleNet PHP wrapper to gain access to the original BattleNet json and jsonp WoW / SC2 / D3 datas**
 
 ## Personal API key
 
@@ -26,7 +26,7 @@ This CODE was released in the public domain WITHOUT ANY WARRANTY OF ANY KIND.
 ## Extra
 
 * If you need, classes was build to work independently (TRequest and its interface necessary)
-* Datas are in the public to promote (if you need) exchanges some datas with a friendship guild and create a in common community app. If you don't need you can protect the folder with a .htaccess file. 
+* Datas are in the public to promote (if you need) the exchanges of some datas with a friendship guild and create a in common community app. If you don't need you can protect the folder with a .htaccess file. 
 
 ## World of Warcraft
 

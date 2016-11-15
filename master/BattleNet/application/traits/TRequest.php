@@ -24,8 +24,8 @@ trait TRequest {
 				'https' =>
 					array(
 						'method' => 'GET',
-						'header' => 'Content-type: application/json\r\n' .
-						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', 0) . ' GMT\r\n'
+						'header' => 'Content-type: application/json' . PHP_EOL .
+						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', 0) . ' GMT'
 					)
 			);
 				
@@ -53,8 +53,8 @@ trait TRequest {
 				'https' =>
 					array(
 						'method' => 'GET',
-						'header' => 'Content-type: application/json\r\n' .
-						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', filemtime($file)) . ' GMT\r\n'
+						'header' => 'Content-type: application/json' . PHP_EOL .
+						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', filemtime($file)) . ' GMT'
 					)
 			);
 	
@@ -107,8 +107,8 @@ trait TRequest {
 				'https' =>
 					array(
 						'method' => 'GET',
-						'header' => 'Content-type: application/javascript\r\n' .
-						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', 0) . ' GMT\r\n'
+						'header' => 'Content-type: application/javascript' . PHP_EOL .
+						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', 0) . ' GMT'
 					)
 			);
 	
@@ -136,8 +136,8 @@ trait TRequest {
 				'https' =>
 					array(
 						'method' => 'GET',
-						'header' => 'Content-type: application/javascript\r\n' .
-						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', filemtime($file)) . ' GMT\r\n'
+						'header' => 'Content-type: application/javascript' . PHP_EOL .
+						'If-Modified-Since: ' . gmdate('D, d M Y H:i:s', filemtime($file)) . ' GMT'
 					)
 			);
 	
@@ -176,6 +176,8 @@ trait TRequest {
 	 */
 	private function toLink($str) {
 		
+		$tempStr = $str;
+		
 		//fake url for php test with filter_var
 		$url = 'https://dev.battle.net/';
 		
@@ -192,7 +194,7 @@ trait TRequest {
 			//Sometimes we need even more dealing (Russian chars, Chinese chars,...)
 			if(!filter_var($url . $str, FILTER_VALIDATE_URL)) {
 					
-				$str = urlencode($str);
+				$str = urlencode($tempStr);
 			}
 		}
 	
